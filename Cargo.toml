@@ -1,0 +1,24 @@
+[package]
+name = "chloroplast-ir"
+version = "0.1.0"
+edition = "2021"
+description = "Detect inverted repeats (IRa/IRb) in an assembled chloroplast genome and re-emit it in canonical LSC-IRB-SSC-IRA end-to-end order, filling N where the assembly leaves a gap."
+license = "MIT"
+authors = ["Gaurav Sablok"]
+
+# Deliberately zero external dependencies: parses FASTA and does the seed-and-extend
+# inverted-repeat search with the standard library only, so it builds anywhere `rustc`
+# runs (no crates.io access required in the field).
+[dependencies]
+
+[[bin]]
+name = "chloroplast-ir"
+path = "src/main.rs"
+
+[lib]
+name = "chloroplast_ir"
+path = "src/lib.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
