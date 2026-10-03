@@ -5,6 +5,10 @@ edition = "2021"
 description = "Detect inverted repeats (IRa/IRb) in an assembled chloroplast genome and re-emit it in canonical LSC-IRB-SSC-IRA end-to-end order, filling N where the assembly leaves a gap."
 license = "MIT"
 authors = ["Gaurav Sablok"]
+homepage = "https://github.com/rustcodepro/chloromapper"
+repository = "https://github.com/rustcodepro/chloromapper"
+keywords = ["bioinformatics", "genomics"]
+categories = ["science", "algorithms"]
 
 # Deliberately zero external dependencies: parses FASTA and does the seed-and-extend
 # inverted-repeat search with the standard library only, so it builds anywhere `rustc`
